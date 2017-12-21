@@ -1,0 +1,15 @@
+# lib: npm
+node_modules
+npm-debug-log
+
+# lib: jspm
+jspm_packages
+
+# ide: webstorm
+.idea
+# ide: vscode
+.vscode
+
+# dev: build cache
+release/build
+run/build
