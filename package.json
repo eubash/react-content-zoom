@@ -4,7 +4,13 @@
   "description": "A pure boilerplate for developing components in React using webpack workflow",
   "main": "index.js",
   "scripts": {
+    "build": "webpack --output-filename index.js",
+    "clean": "npm-run-all --parallel clean:*",
+    "clean:build": "rm -r run/build",
+    "clean:dist": "rm -r dist",
+    "copy": "babel --copy-files --out-dir dist --ignore bundle.js run/build/",
     "dev": "webpack-dev-server --hot --inline",
+    "prebuild": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "ssimplatina@gmail.com",
@@ -24,8 +30,11 @@
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "style-loader": "^0.13.0",
-    "webpack": "^1.15.0",
-    "webpack-dev-server": "^1.14.1"
+    "webpack": "^1.13.0",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-hot-middleware": "^2.10.0",
+    "webpack-node-externals": "^1.6.0"
   },
   "babel": {
     "presets": [
