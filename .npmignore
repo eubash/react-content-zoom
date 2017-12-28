@@ -1,0 +1,6 @@
+index.html
+node_modules
+src/app.js
+.idea
+npm-debug.log
+webpack.config.js

@@ -1,0 +1,6 @@
+/****** Main file for image zoom styles ******/
+
+.zoomed-image {
+    background-size: cover;
+    cursor: pointer;
+}

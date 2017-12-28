@@ -1,19 +1,30 @@
-'use strict';
-const webpack = require('webpack');
-const devServerConf = require('./run/config/webpack-dev-server-config');
-const loaders = require('./develop/config/loaders');
+var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
-  entry: './develop/entry.js',
+  devtool: 'source-map',
+  entry: [
+    './src/app.js'
+  ],
   output: {
-    filename: 'bundle.js',
-    path: __dirname + '/run/build'
+    path: path.join(__dirname, 'dist'),
+    filename: 'contentzoom.js',
+    library: 'contentzoom',
+    libraryTarget:'umd',
+    publicPath: '/static/'
   },
-  devServer: devServerConf,
   module: {
-    loaders: loaders
-  },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ]
-};
+    loaders: [
+      {
+        test: /\.js?/,
+        loaders: ['babel'],
+        exclude: /node_modules/,
+        include: path.join(__dirname, 'src')
+      },
+      {
+        test: /\.css$/,
+        loader: "style-loader!css-loader"
+      }
+    ]
+  }
+}
