@@ -4,6 +4,10 @@ React lightweight stateless component for image zoom on mouse hover.
 
 Designed for e-commerce sites product detail.
 
+## Demo
+
+[Demo](https://eubash.github.io/react-content-zoom/example/index.html)
+
 ## Status
 [![npm](https://img.shields.io/npm/v/react-content-zoom.svg)](https://www.npmjs.com/package/react-content-zoom)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
