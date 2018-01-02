@@ -23,7 +23,15 @@ import ContentZoom from 'react-content-zoom';
              largeImageUrl="./static/img.jpg"
              imageUrl="./static/img_small.jpg"
              contentHeight={300}
-             contentWidth={500}><h1>Put your content here if you need!</h1></ContentZoom>
+             contentWidth={500} />
+...
+You can put some content inside if you need
+...
+<ContentZoom zoomPercent={350}
+             largeImageUrl="./static/img.jpg"
+             imageUrl="./static/img_small.jpg"
+             contentHeight={300}
+             contentWidth={500}><h1>Put your content here!</h1></ContentZoom>
 ...
 ```
 Support any content inside your image container.
