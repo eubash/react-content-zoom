@@ -1,4 +1,7 @@
 dist
 node_modules
+.nyc_output/
+coverage/
 .idea
 npm-debug.log
+__tests__/__snapshots__

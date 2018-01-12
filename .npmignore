@@ -1,7 +1,10 @@
 example
 index.html
 node_modules
+.nyc_output/
+coverage/
 src/app.js
 .idea
 npm-debug.log
 webpack.config.js
+__tests__
