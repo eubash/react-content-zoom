@@ -88,12 +88,12 @@ export default class ContentZoom extends React.Component {
     width = this.props.contentWidth ? this.props.contentWidth + 'px' : '100%';
 
     return <div>
-        <div className="zoomed-image" ref={(elem) => {
-          this.zoomedImageElement = elem;
-        }} style={{height, width}}>
-          {this.contentToZoom}
-          {children}
-        </div>
+      <div className="zoomed-image" ref={(elem) => {
+        this.zoomedImageElement = elem;
+      }} style={{height, width}}>
+        {this.contentToZoom}
+        {children}
+      </div>
     </div>;
   }
 

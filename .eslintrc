@@ -1,15 +1,18 @@
 {
-  "plugins": [
-    "react"
-  ],
+  "extends": "eslint:recommended",
   "parser": "babel-eslint",
   "parserOptions": {
     "sourceType": "module"
   },
-  "ecmafeatures": {
-    "modules": true,
-    "jsx": true
+  "env": {
+    "node": true,
+    "mocha": true,
+    "browser": true,
+    "es6": true
   },
+  "plugins": [
+    "react"
+  ],
   "rules": {
     "array-bracket-spacing": [
       2,
