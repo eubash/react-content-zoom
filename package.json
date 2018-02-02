@@ -5,7 +5,7 @@
   "main": "dist/contentzoom.js",
   "scripts": {
     "dev": "webpack-dev-server --hot --inline",
-    "build": "webpack",
+    "build": "webpack -p",
     "clean": "rm -r dist",
     "test": "jest -u",
     "test:watch": "jest --watch",
@@ -16,11 +16,13 @@
     "moduleNameMapper": {
       "\\.(css|less)$": "identity-obj-proxy"
     },
-    "snapshotSerializers": ["enzyme-to-json/serializer"],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
     "setupFiles": [
       "./__tests__/setup.js"
     ],
-    "testRegex": "__tests__\/.*\\.test\\.js$",
+    "testRegex": "__tests__/.*\\.test\\.js$",
     "verbose": true
   },
   "repository": {

@@ -10,7 +10,7 @@ module.exports = {
     path: path.join(__dirname, 'dist'),
     filename: 'contentzoom.js',
     library: 'contentzoom',
-    libraryTarget:'umd',
+    libraryTarget: 'umd',
     publicPath: '/static/'
   },
   module: {
@@ -23,8 +23,14 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: "style-loader!css-loader"
+        loader: 'css-loader',
+        use: ['style-loader', 'css-loader']
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': '"production"'
+    })
+  ]
 }
