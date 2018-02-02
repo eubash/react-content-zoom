@@ -18,6 +18,18 @@ Designed for e-commerce sites product detail.
 npm install --save react-content-zoom
 ```
 
+## Styles
+
+```css
+include this css in your project
+...
+.zoomed-image {
+   background-size: cover;
+   cursor: pointer;
+}
+...
+```
+
 ## Usage
 
 ```JavaScript
