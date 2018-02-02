@@ -1,6 +1,6 @@
 {
   "name": "react-content-zoom",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React lightweight stateless component for image zoom on mouse hover",
   "main": "dist/contentzoom.js",
   "scripts": {
