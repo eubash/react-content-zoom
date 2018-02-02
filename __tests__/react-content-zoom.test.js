@@ -11,7 +11,7 @@ describe('<ContentZoom />', () => {
   it('calls componentDidMount', () => {
     const wrapper = mount(<ContentZoom />);
     expect(ContentZoom.prototype.componentDidMount.calledOnce).toEqual(true);
-  });
+  })
 
   it('should render correctly', () => {
     const output = shallow(
@@ -20,10 +20,14 @@ describe('<ContentZoom />', () => {
         contentHeight={266}/>
     );
     expect(shallowToJson(output)).toMatchSnapshot();
-  });
+  })
 
   it('renders as a div', () => {
     const wrapper = shallow(<ContentZoom />);
     expect(wrapper.is('div')).toBe(true);
-  });
+  })
+
+  it('should render without throwing an error', () => {
+    expect(shallow(<ContentZoom />).exists(<div className='zoomed-image'></div>)).toBe(true);
+  })
 });
